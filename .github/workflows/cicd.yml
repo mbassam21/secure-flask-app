@@ -101,7 +101,7 @@ jobs:
         env:
           COSIGN_EXPERIMENTAL: "true"  # Enables keyless signing
         run: |
-          cosign sign --yes ${{ secrets.DOCKERHUB_USERNAME }}/flask:latest
+          cosign sign --yes ${{ secrets.DOCKERHUB_USERNAME }}/flask:${{ github.sha }}
 
 
 
