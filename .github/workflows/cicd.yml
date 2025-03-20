@@ -79,7 +79,7 @@ jobs:
       - name: Run Trivy Security Scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: '${{ secrets.DOCKERHUB_USERNAME }}/flask-app:latest' # Fixed underscore issue
+          image-ref: '${{ secrets.DOCKERHUB_USERNAME }}/flask-app:latest'
           format: 'table'
           exit-code: 1
           severity: 'CRITICAL,HIGH'
